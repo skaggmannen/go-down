@@ -4,7 +4,7 @@ The is a simple package to generate Markdown using Go code.
 
 ## Example
 
-```
+```go
 package main
 
 import . "github.com/skaggmannen/go-down"
@@ -18,5 +18,6 @@ func main() {
       Li(Em("Another item"),
     ),
   )
+  fmt.Println(doc)
 }
 ```
