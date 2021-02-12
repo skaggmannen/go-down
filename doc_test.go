@@ -74,8 +74,21 @@ func Problem() string {
 				CodeExample(),
 			),
 			Li("See ", Link("Introduction", "#introduction"), " for more info."),
+			Li(
+				P("Consider Phlebas:"),
+				Quote(`
+					What should I do with a submarine?
+					- That guy from Village People
+				`),
+			),
 		),
 		P("That's all folks, have a good night."),
+		Quote(`
+			The definition of insanity is trying the same thing over and over
+			and expect the results to be different.
+			- Einstein
+			- Michael Scott
+		`),
 	)
 }
 

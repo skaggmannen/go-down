@@ -41,9 +41,17 @@ The people responsible for spreading these lies are the following:
    }
    ```
 6. See [Introduction](#introduction) for more info.
+7. Consider Phlebas:
+   
+   > What should I do with a submarine?
+   > - That guy from Village People
 
 That's all folks, have a good night.
 
+> The definition of insanity is trying the same thing over and over
+> and expect the results to be different.
+> - Einstein
+> - Michael Scott
 ```go
 package main
 
