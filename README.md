@@ -1,6 +1,7 @@
 # go-down
 
-The is a simple package to generate Markdown using Go code.
+This is a simple project to generate Markdown using Go code. It's even been used
+to generate this readme file!
 
 ## Example
 
@@ -10,14 +11,15 @@ package main
 import . "github.com/skaggmannen/go-down"
 
 func main() {
-  doc := Doc(
-    H1("Hello world!"),
-    P("This is earth speaking."),
-    Ul(
-      Li("An item"),
-      Li(Em("Another item")),
-    ),
-  )
-  fmt.Println(doc)
+	doc := Doc(
+		H1("Top heading"),
+		P("This is earth speaking."),
+		Ul(
+			Li("An item"),
+			Li(Strike("Another item")),
+		),
+		Quote("Build it and they will come."),
+		P("How about a link to the ", Ref("Top heading"), "?"),
+	)
 }
 ```
