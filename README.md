@@ -15,7 +15,7 @@ func main() {
     P("This is earth speaking."),
     Ul(
       Li("An item"),
-      Li(Em("Another item"),
+      Li(Em("Another item")),
     ),
   )
   fmt.Println(doc)
