@@ -48,9 +48,9 @@ The people responsible for spreading these lies are the following:
 
 That's all folks, have a good night.
 
-> The definition of insanity is trying the same thing over and over
-> and expect the results to be different.
-> - Einstein
+> > The definition of insanity is trying the same thing over and over
+> > and expect the results to be different.
+> > - Einstein
 > - Michael Scott
 ```go
 package main

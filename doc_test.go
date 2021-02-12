@@ -83,12 +83,14 @@ func Problem() string {
 			),
 		),
 		P("That's all folks, have a good night."),
-		Quote(`
-			The definition of insanity is trying the same thing over and over
-			and expect the results to be different.
-			- Einstein
-			- Michael Scott
-		`),
+		Quote(
+			Quote(`
+				The definition of insanity is trying the same thing over and over
+				and expect the results to be different.
+				- Einstein
+			`),
+			`- Michael Scott`,
+		),
 	)
 }
 
