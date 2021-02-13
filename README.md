@@ -6,22 +6,25 @@ to generate this readme file!
 ## Example
 
 ```go
-package main
+package godown
 
-import . "github.com/skaggmannen/go-down"
+import (
+	"io/ioutil"
+	"testing"
+)
 
-func main() {
-	doc := Doc(
-		H1("Top heading"),
-		P("This is earth speaking."),
-		Ul(
-			Li("An item"),
-			Li(Strike("Another item")),
-		),
-		Quote("Build it and they will come."),
-		P("How about a link to the ", Ref("Top heading"), "?"),
-		P("Or maybe we want the link text to be ", Link("different", "#top-heading"), "."),
+func TestReadme(t *testing.T) {
+	simpleExample, _ := ioutil.ReadFile("readme_test.go")
+
+	readme := Doc(
+		H1("go-down"),
+		P(`
+			This is a simple project to generate Markdown using Go code. It's even been used 
+			to generate this readme file!
+		`),
+		H2("Example"),
+		Code("go", string(simpleExample)),
 	)
-	fmt.Println(doc)
+	_ = ioutil.WriteFile("README.md", []byte(readme), 0644)
 }
 ```

@@ -6,27 +6,8 @@ import (
 )
 
 func TestReadme(t *testing.T) {
+	simpleExample, _ := ioutil.ReadFile("readme_test.go")
 
-	const simpleExample = `
-package main
-
-import . "github.com/skaggmannen/go-down"
-
-func main() {
-	doc := Doc(
-		H1("Top heading"),
-		P("This is earth speaking."),
-		Ul(
-			Li("An item"),
-			Li(Strike("Another item")),
-		),
-		Quote("Build it and they will come."),
-		P("How about a link to the ", Ref("Top heading"), "?"),
-		P("Or maybe we want the link text to be ", Link("different", "#top-heading"), "."),
-	)
-	fmt.Println(doc)
-}
-`
 	readme := Doc(
 		H1("go-down"),
 		P(`
@@ -34,7 +15,7 @@ func main() {
 			to generate this readme file!
 		`),
 		H2("Example"),
-		Code("go", simpleExample),
+		Code("go", string(simpleExample)),
 	)
 	_ = ioutil.WriteFile("README.md", []byte(readme), 0644)
 }
