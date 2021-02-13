@@ -20,6 +20,8 @@ func main() {
 		),
 		Quote("Build it and they will come."),
 		P("How about a link to the ", Ref("Top heading"), "?"),
+		P("Or maybe we want the link text to be ", Link("different", "#top-heading"), "."),
 	)
+	fmt.Println(doc)
 }
 ```

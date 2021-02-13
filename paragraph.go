@@ -4,6 +4,7 @@ import (
 	"strings"
 )
 
-func P(val string) string {
+func P(items ...string) string {
+	val := strings.Join(items, "")
 	return fixIndent(strings.TrimSpace(val), "") + "\n\n"
 }
